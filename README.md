@@ -52,11 +52,12 @@ yang memiliki substring “semeru” akan diarahkan menuju semeru.jpg.
 ## JAWAB ##
 Sebelum mulai menjawab, lakukan dulu langkah-langkah yang ada di modul pengenalan UML, baru lanjut menjawab soal.
 
-**1. Memmbuat website utama dengan alamat http://www.semerua12.pw***
+**1. Memmbuat website utama dengan alamat http://www.semerua12.pw**
 
 Pertama, buat topologi kemudian di bash dengan ```bash topologi2.sh```
 <p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98713601-662c4a80-23ba-11eb-906d-b33057087c6a.png"></p>
-Kemudian login semua UML dengan username=```root``` dan password=```praktikum``` dan pada IP Malang, dilakukan update dan instalasi bind9 dengan cara
+
+Kemudian login semua UML dengan username= ```root``` dan password= ```praktikum``` dan pada IP Malang, dilakukan update dan instalasi bind9 dengan cara
 ```
 apt-get update
 apt-get install bind9 -y
