@@ -70,5 +70,7 @@ zone "semerua12.pw" {
 };
 ```
 <p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98716432-236c7180-23be-11eb-8c7f-06e807fbefb5.png"></p>
+
 Lalu buat folder jarkom dengan ```mkdir /etc/bind/jarkom``` dan copykan file ```db.local``` pada path ```/etc/bind``` ke dalam folder jarkom dengan ```cp /etc/bind/db.local /etc/bind/jarkom/semerua12.pw``` dan edit file semerua12.pw pada IP Malang ```nano /etc/bind/jarkom/semerua12.pw```
+
 <p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98716894-e359be80-23be-11eb-8103-699c5b79794b.png"></p>
