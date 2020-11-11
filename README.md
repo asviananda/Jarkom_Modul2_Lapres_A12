@@ -154,7 +154,7 @@ Lalu edit file ```/etc/bind/named.conf.local``` seperti dibawah
 
 Lalu buat direktori dengan delegasi dan copy ```db.local``` ke direktori delegasi dan beri nama ```gunung.semerua12.pw``` dan edit filenya seperti gambar dibawah
 
-<p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98802258-9d940900-2445-11eb-9707-3587390be956.png"></p>
+<p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98812697-83fabd80-2455-11eb-8630-3070efadea9b.png"></p>
 
 Lalu restart bind9 seperti nomor-nomor sebelumnya
 
