@@ -136,6 +136,36 @@ Sidoarjo :
 **6. Membuat subdomain dengan alamat
 http://gunung.semeruyyy.pw yang didelegasikan pada server MOJOKERTO dan mengarah ke Server PROBOLINGGO**
 
+Pertama, buka file semerua12.pw, kemudian tambahkan seperti yang ada pada gambar 
+
+<p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98797114-b8af4a80-243e-11eb-9568-27f11a15327f.png"></p>
+
+Kemudian edit file ```/etc/bind/named.conf.options``` pada Server Malang dan tambahkan isi seperti gambar dibawah
+
+<p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98797524-43904500-243f-11eb-84b7-b028ac79fd8d.png"></p>
+
+Lalu restart bind9. Selanjutnya pada Server Mojokerto, edit isi file ```/etc/bind/named.conf.options``` dengan menambahkan seperti pada gambar dibawah
+
+<p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98797769-979b2980-243f-11eb-91df-6f22f294d76e.png"></p>
+
+Lalu edit file ```/etc/bind/named.conf.local``` seperti dibawah
+
+<p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98797936-d7faa780-243f-11eb-913a-e813f8f92e77.png"></p>
+
+Lalu buat direktori dengan delegasi dan copy ```db.local``` ke direktori delegasi dan beri nama ```gunung.semerua12.pw``` dan edit filenya seperti gambar dibawah
+
+<p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98802258-9d940900-2445-11eb-9707-3587390be956.png"></p>
+
+Lalu restart bind9 seperti nomor-nomor sebelumnya
+
 **7. Membuat subdomain dengan nama http://naik.gunung.semeruyyy.pw, domain ini diarahkan ke IP Server PROBOLINGGO**
+
+Buka file gunung.semerua12.pw dan edit isinya seperti gambar dibawah 
+
+<p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98802844-77bb3400-2446-11eb-8676-a0ba2faa324f.png"></p>
+
+Kemudian restart bind9 dan lakukan testing pada klien Gresik dan Sidoarjo
+
+**8. Mengatur webserver domain http://semerua12.pw memiliki DocumentRoot pada /var/www/semerua12.pw.**
 
 
