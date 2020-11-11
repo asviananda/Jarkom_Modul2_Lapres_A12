@@ -93,7 +93,7 @@ Sidoarjo :
 
 **3. Membuat subdomain http://penanjakan.semerua12.pw yang diatur DNSnya pada MALANG dan mengarah ke IP PROBOLINGGO**
 
-Edit isi file semerua12.pw dan tambahkan subdomain ```penanjakan.semerua12.pw``` yang mengarah ke Server Probolinggo dari Server Malang
+Edit isi file semerua12.pw dan tambahkan subdomain ```penanjakan.semerua12.pw``` yang mengarah ke IP Probolinggo dari IP Malang
 
 <p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98724700-b3aeb480-23c6-11eb-94cb-f814aca9b427.png"></p>
 
