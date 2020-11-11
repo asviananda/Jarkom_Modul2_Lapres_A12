@@ -57,12 +57,12 @@ Sebelum mulai menjawab, lakukan dulu langkah-langkah yang ada di modul pengenala
 Pertama, buat topologi kemudian di bash dengan ```bash topologi2.sh```
 <p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98713601-662c4a80-23ba-11eb-906d-b33057087c6a.png"></p>
 
-Kemudian login semua UML dengan username= ```root``` dan password= ```praktikum``` dan pada IP Malang, dilakukan update dan instalasi bind9 dengan cara
+Kemudian login semua UML dengan username= ```root``` dan password= ```praktikum``` dan pada Server Malang, dilakukan update dan instalasi bind9 dengan cara
 ```
 apt-get update
 apt-get install bind9 -y
 ```
-Kemudian untuk membuat domain, isikan konfigurasi domain semerua12.pw pada IP Malang dengan syntax
+Kemudian untuk membuat domain, isikan konfigurasi domain semerua12.pw pada Server Malang dengan syntax
 ```
 zone "semerua12.pw" {
 	type master;
@@ -71,7 +71,7 @@ zone "semerua12.pw" {
 ```
 <p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98727942-549f6e80-23cb-11eb-87f6-478f1f3914d4.png"></p>
 
-Lalu buat folder jarkom dengan ```mkdir /etc/bind/jarkom``` dan copykan file ```db.local``` pada path ```/etc/bind``` ke dalam folder jarkom dengan ```cp /etc/bind/db.local /etc/bind/jarkom/semerua12.pw``` dan edit file semerua12.pw pada IP Malang ```nano /etc/bind/jarkom/semerua12.pw```
+Lalu buat folder jarkom dengan ```mkdir /etc/bind/jarkom``` dan copykan file ```db.local``` pada path ```/etc/bind``` ke dalam folder jarkom dengan ```cp /etc/bind/db.local /etc/bind/jarkom/semerua12.pw``` dan edit file semerua12.pw pada Server Malang ```nano /etc/bind/jarkom/semerua12.pw```
 
 <p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98716894-e359be80-23be-11eb-8103-699c5b79794b.png"></p>
 
@@ -81,7 +81,7 @@ Tambahkan isian konfigurasi sesuai dengan gambar dibawah, kemudian lakukan resta
 
 <p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98723557-228b0e00-23c5-11eb-8b9b-cc3850242afe.png"></p>
 
-Kemudian untuk memeriksa benar atau tidak, lakukan ```ping semerua12.pw``` pada Gresik dan Sidoarjo
+Kemudian untuk memeriksa benar atau tidak, lakukan ```ping semerua12.pw``` pada Klien Gresik dan Sidoarjo
 Gresik :
 
 <p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98724429-53b80e00-23c6-11eb-9230-ff50377e91ba.png"></p>
@@ -92,11 +92,11 @@ Sidoarjo :
 
 **3. Membuat subdomain http://penanjakan.semerua12.pw yang diatur DNSnya pada MALANG dan mengarah ke IP PROBOLINGGO**
 
-Edit isi file semerua12.pw dan tambahkan subdomain ```penanjakan.semerua12.pw``` yang mengarah ke IP Probolinggo dari IP Malang
+Edit isi file semerua12.pw dan tambahkan subdomain ```penanjakan.semerua12.pw``` yang mengarah ke Server Probolinggo dari Server Malang
 
 <p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98724700-b3aeb480-23c6-11eb-94cb-f814aca9b427.png"></p>
 
-Lalu restart bind9 dan ping subdomain pada IP Gresik dan Sidoarjo seperti nomor 2
+Lalu restart bind9 dan ping subdomain pada Klien Gresik dan Sidoarjo seperti nomor 2
 
 **4. Membuat reverse domain untuk domain utama**
 
@@ -104,7 +104,7 @@ Pertama, buka ```nano /etc/bind/named.conf.local``` dan tambahkan konfigurasi se
 
 <p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98726014-7e0acb00-23c8-11eb-9750-18db309c72b9.png"></p>
 
-kemudian di restart bind9 dan periksa pada IP Gresik dan Sidoarjo dengan cara
+kemudian di restart bind9 dan periksa pada Klien Gresik dan Sidoarjo dengan cara
 ```
 apt-get update
 apt-get install dnsutils
@@ -114,15 +114,15 @@ host -t PTR 10.151.73.106
 
 **5. Membuat DNS Server Slave pada MOJOKERTO**
 
-Pada IP Malang, tambahkan syntax seperti pada gambar dibawah ini
+Pada Server Malang, tambahkan syntax seperti pada gambar dibawah ini
 
 <p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98727744-ff635d00-23ca-11eb-8ca8-a68711565165.png"></p>
 
-Lalu restart bind9 seperti nomor-nomor sebelumnya. Kemudian pada IP Mojokerto, lakukan update dan install bind9. Setelah selesai, edit isi file ```/etc/bind/named.conf.local``` sesuai dengan gambar dibawah
+Lalu restart bind9 seperti nomor-nomor sebelumnya. Kemudian pada Server Mojokerto, lakukan update dan install bind9. Setelah selesai, edit isi file ```/etc/bind/named.conf.local``` sesuai dengan gambar dibawah
 
 <p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98728533-37b76b00-23cc-11eb-9752-d850b6d6ca25.png"></p>
 
-Lalu restart bind9. Untuk testing, matikan bind9 pada IP Malang dengan cara ```service bind9 stop```. Setelah itu, pastikan nameserver pada klien sudah mengarah pada IP Malang dan IP Mojokerto dengan memasukkan IP Malang dan IP Mojokerto kedalam ```/etc/resolv.conf```
+Lalu restart bind9. Untuk testing, matikan bind9 pada Server Malang dengan cara ```service bind9 stop```. Setelah itu, pastikan nameserver pada klien sudah mengarah pada Server Malang dan Server Mojokerto dengan memasukkan IP Malang dan IP Mojokerto kedalam ```/etc/resolv.conf```
 
 Gresik :
 
@@ -132,4 +132,9 @@ Sidoarjo :
 
 <p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98728896-ad233b80-23cc-11eb-9d53-e209eb71719e.png"></p>
 
-**6. **
+**6. Membuat subdomain dengan alamat
+http://gunung.semeruyyy.pw yang didelegasikan pada server MOJOKERTO dan mengarah ke Server PROBOLINGGO**
+
+**7. Membuat subdomain dengan nama http://naik.gunung.semeruyyy.pw, domain ini diarahkan ke IP Server PROBOLINGGO**
+
+
