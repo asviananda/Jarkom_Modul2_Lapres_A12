@@ -162,7 +162,7 @@ Lalu restart bind9 seperti nomor-nomor sebelumnya
 
 Buka file gunung.semerua12.pw dan edit isinya seperti gambar dibawah 
 
-<p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98802844-77bb3400-2446-11eb-8676-a0ba2faa324f.png"></p>
+<p align ="center"><img width="500" src="hhttps://user-images.githubusercontent.com/62512432/98812771-a096f580-2455-11eb-9119-8a7cb6631c06.png"></p>
 
 Kemudian restart bind9 dan lakukan testing pada klien Gresik dan Sidoarjo
 
