@@ -82,6 +82,7 @@ Tambahkan isian konfigurasi sesuai dengan gambar dibawah, kemudian lakukan resta
 <p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98723557-228b0e00-23c5-11eb-8b9b-cc3850242afe.png"></p>
 
 Kemudian untuk memeriksa benar atau tidak, lakukan ```ping semerua12.pw``` pada Klien Gresik dan Sidoarjo
+
 Gresik :
 
 <p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/98724429-53b80e00-23c6-11eb-9230-ff50377e91ba.png"></p>
