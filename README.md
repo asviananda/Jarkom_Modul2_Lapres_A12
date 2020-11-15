@@ -168,4 +168,10 @@ Kemudian restart bind9 dan lakukan testing pada klien Gresik dan Sidoarjo
 
 **8. Mengatur webserver domain http://semerua12.pw memiliki DocumentRoot pada /var/www/semerua12.pw.**
 
+Pertama, pindah ke directory ```etc/apache2/sites-available``` pada Server Probolinggo dan buka file semerua12.pw lalu tambahkan seperti gambar dibawah
 
+<p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/99186265-bd973580-2781-11eb-8917-a8e29e3f7871.png"></p>
+
+Kemudian, gunakan perintah ```a2ensite semerua12.pw```, selanjutnya gunakan perintah ```service apache2 restart``` untuk merestart apache. Setelah itu, pindahkan directory ke ```/var/www``` dan download file zip pada ```wget 10.151.36.202/semeru.pw.zip``` lalu unzip file dan diubah namanya menjadi semerua12.pw. Terakhir, buka browser untuk mengakses web ```http://semerua12.pw```. Berikut hasilnya
+
+<p align ="center"><img width="500" src="https://user-images.githubusercontent.com/62512432/99186382-7fe6dc80-2782-11eb-9311-6ceee069e027.png"></p>
